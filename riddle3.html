@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+<title>Among us</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+.w3-sidebar {width: 120px;background: #222;}
+#main {margin-left: 120px}
+#map area{
+    cursor:default;
+}
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+</style>
+
+<head>
+  <link rel="icon" href="icons/favicon.ico" />
+</head>
+<body class="w3-black">
+
+  <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+    <img src="icons/logo.png" style="padding: 5%;width: 100%">
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+      <img src="icons/icon_home.png" width="60px" height="60px"/>
+      <p style="padding-top: 5px;"> <b>HOME</b></p>
+    </a>
+    <a href="riddle1.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+      <img src="icons/icon_morse.png" width="60px" height="60px"/>
+      <p style="padding-top: 5px;"><b>Riddle 1</b></p>
+    </a>
+    <a href="riddle2.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+      <img src="icons/icon_story.png" width="60px" height="60px"/>
+      <p style="padding-top: 5px;"> <b>Riddle 2</b></p>
+    </a>
+    <a href="riddle3.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+      <img src="icons/icon_loupe.png" width="60px" height="60px"/>
+      <p style="padding-top: 5px;"> <b>Riddle 3</b></p>
+    </a>
+  </nav>
+</div>
+
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="index.html" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="riddle1.html" class="w3-bar-item w3-button" style="width:25% !important">Riddle 1</a>
+    <a href="riddle2.html" class="w3-bar-item w3-button" style="width:25% !important">Riddle 3</a>
+    <a href="riddle3.html" class="w3-bar-item w3-button" style="width:25% !important">Riddle 3</a>
+  </div>
+</div>
+
+<div  id="main" class="w3-center">
+  
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo">Find the Hidden Impostor</h1>
+  </header>
+
+  <div class="w3-center">
+
+    <h1 style="padding-top: 50px;">Where is the Impostor ?</h1>
+    <img id="map1" src="maps/map1.jpg" alt="Avatar" style="padding-top: 20px;" height="600px" width="1000px" usemap="#map1">
+    <map id="map" name="map1" >
+      <area shape="rect" coords="370, 275, 387, 299" onclick="myFunction()" href="#" alt="rectangle example" />
+    </map>
+
+    <h1 style="padding-top: 30px;">Where is the Impostor ?</h1>
+    <img id="map2" src="maps/map2.png" alt="Avatar" style="padding-top: 20px;" height="600px" width="800px" usemap="#map2">
+
+<map id="map" name="map2" >
+  <area shape="rect" coords="75, 255, 88, 270" onclick="myFunction()" href="#" alt="rectangle example" />
+</map>
+    
+    <h1 style="padding-top: 50px;">Where is the Impostor ?</h1>
+    <img id="map3" src="maps/map3.jpg" alt="Avatar" style="padding-top: 20px;" height="600px" width="800px" usemap="#map3">
+
+<map id="map" name="map3" >
+  <area shape="rect" coords="478, 200, 490, 218" onclick="myFunction()" href="#" alt="rectangle example" />
+</map>
+  </div>
+
+  <footer class="w3-center w3-text-grey w3-xlarge" style="padding-top: 50px;">
+    <p class="w3-medium">Powered by Caffeine and energy drinks (mostly)</a></p>
+  </footer>
+
+  <script>
+    function myFunction() {
+      alert("You caught the impostor. Well Done crewmate !!");
+    }
+  </script>
+
+</div>
+</body>
+</html>

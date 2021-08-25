@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+<title>Among us</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+.w3-sidebar {width: 120px;background: #222;}
+#main {margin-left: 120px}
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+</style>
+<head>
+  <link rel="icon" href="icons/favicon.ico" />
+</head>
+<body class="w3-black">
+
+  <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+    <img src="icons/logo.png" style="padding: 5%;width: 100%">
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+      <img src="icons/icon_home.png" width="60px" height="60px"/>
+      <p style="padding-top: 5px;"> <b>HOME</b></p>
+    </a>
+    <a href="riddle1.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+      <img src="icons/icon_morse.png" width="60px" height="60px"/>
+      <p style="padding-top: 5px;"><b>Riddle 1</b></p>
+    </a>
+    <a href="riddle2.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+      <img src="icons/icon_story.png" width="60px" height="60px"/>
+      <p style="padding-top: 5px;"> <b>Riddle 2</b></p>
+    </a>
+    <a href="riddle3.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+      <img src="icons/icon_loupe.png" width="60px" height="60px"/>
+      <p style="padding-top: 5px;"> <b>Riddle 3</b></p>
+    </a>
+  </nav>
+</div>
+
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="index.html" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="riddle1.html" class="w3-bar-item w3-button" style="width:25% !important">Riddle 1</a>
+    <a href="riddle2.html" class="w3-bar-item w3-button" style="width:25% !important">Riddle 3</a>
+    <a href="riddle3.html" class="w3-bar-item w3-button" style="width:25% !important">Riddle 3</a>
+  </div>
+</div>
+
+
+<div class="modal fade" id="modalBlue" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" style="margin-top: 75px;">
+    <div class="modal-content modal-lg">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" style="color: black; font-size: large;"><b>Blue Sus ?</b></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body w3-center">
+       <img src="./perso/bleu.png">
+      </div>
+      <div class="w3-center" style="padding-bottom: 20px;">
+        <button type="button" class="btn btn-primary" style="background-color: red;" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#modalLoseBlue">Eliminate</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalGreen" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog"style="margin-top: 75px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" style="color: black; font-size: large;"><b>Green Sus ?</b></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body w3-center">
+       <img src="perso/vertclair.png">
+      </div>
+      <div class="w3-center" style="padding-bottom: 20px;">
+        <button type="button" class="btn btn-primary" style="background-color: red;"data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#modalLoseGreen">Eliminate</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalWhite" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog"style="margin-top: 75px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" style="color: black; font-size: large;"><b>White Sus ?</b></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body w3-center">
+       <img src="perso/blanc.png">
+      </div>
+      <div class="w3-center" style="padding-bottom: 20px;">
+        <button type="button" class="btn btn-primary" style="background-color: red;" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#modalLoseWhite">Eliminate</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalBlack" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog"style="margin-top: 75px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" style="color: black; font-size: large;"><b>Black Sus ?</b></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body w3-center">
+       <img src="perso/noir.png">
+      </div>
+      <div class="w3-center" style="padding-bottom: 20px;">
+        <button type="button" class="btn btn-primary" style="background-color: red;" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#modalLoseBlack">Eliminate</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalBrown" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog"style="margin-top: 75px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" style="color: black; font-size: large;"><b>Brown Sus ?</b></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body w3-center">
+       <img src="perso/marron.png">
+      </div>
+      <div class="w3-center" style="padding-bottom: 20px;">
+        <button type="button" class="btn btn-primary" style="background-color: red;" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#modalWin">Eliminate</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalLightBlue" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog"style="margin-top: 75px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" style="color: black; font-size: large;"><b>Light Blue Sus ?</b></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body w3-center">
+       <img src="perso/bleuciel.png">
+      </div>
+      <div class="w3-center" style="padding-bottom: 20px;">
+        <button type="button" class="btn btn-primary" style="background-color: red;" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#modalLoseLightBlue">Eliminate</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalYellow" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog"style="margin-top: 75px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" style="color: black; font-size: large;"><b>Yellow Sus ?</b></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body w3-center">
+       <img src="perso/jaune.png">
+      </div>
+      <div class="w3-center" style="padding-bottom: 20px;">
+        <button type="button" class="btn btn-primary" style="background-color: red;" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#modalLoseYellow">Eliminate</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalOrange" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog"style="margin-top: 75px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" style="color: black; font-size: large;"><b>Orange Sus ?</b></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body w3-center">
+       <img src="perso/orange.png">
+      </div>
+      <div class="w3-center" style="padding-bottom: 20px;">
+        <button type="button" class="btn btn-primary" style="background-color: red;" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#modalLoseOrange">Eliminate</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalRed" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog"style="margin-top: 75px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" style="color: black; font-size: large;"><b>Red Sus ?</b></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body w3-center">
+
+       <img src="perso/rouge.png">
+      </div>
+      <div class="w3-center" style="padding-bottom: 20px;">
+        <button type="button" class="btn btn-primary" style="background-color: red;" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#modalLoseRed">Eliminate</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalPurple"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" style="margin-top: 75px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" style="color: black; font-size: large;"><b>Purple Sus ?</b></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body w3-center">
+       <img src="perso/violet.png">
+      </div>
+      <div class="w3-center" style="padding-bottom: 20px;">
+        <button type="button" class="btn btn-primary" style="background-color: red;" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#modalLosePurple">Eliminate</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalWin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog"style="margin-top: 75px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body w3-center">
+       <img src="perso/marron_mort.png">
+      </div>
+      <div class="w3-center" style="padding-bottom: 20px;">
+        <h1 style="color: black;">Brown Was The Impostor !</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="modalLoseBlue" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg"style="margin-top: 75px;">
+    <div class="modal-content ">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body w3-center">
+       <img src="perso/ghost_bleu.png">
+      </div>
+      <div class="w3-center" style="padding-bottom: 20px;">
+        <h1 style="color: black;">Blue Was Not The Impostor !</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalLoseGreen" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg"style="margin-top: 75px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body w3-center">
+       <img src="perso/ghost_vert.png">
+      </div>
+      <div class="w3-center" style="padding-bottom: 20px;">
+        <h1 style="color: black;">Green Was Not The Impostor !</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalLoseWhite" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg"style="margin-top: 75px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body w3-center">
+       <img src="perso/ghost.png">
+      </div>
+      <div class="w3-center" style="padding-bottom: 20px;">
+        <h1 style="color: black;">White Was Not The Impostor !</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalLoseBlack" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg"style="margin-top: 75px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body w3-center">
+       <img src="perso/ghost_noir.png">
+      </div>
+      <div class="w3-center" style="padding-bottom: 20px;">
+        <h1 style="color: black;">Black Was Not The Impostor !</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalLoseLightBlue" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg"style="margin-top: 75px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body w3-center">
+       <img src="perso/ghost_bleuciel.png">
+      </div>
+      <div class="w3-center" style="padding-bottom: 20px;">
+        <h1 style="color: black;">It Was Not The Impostor !</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalLoseYellow" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg"style="margin-top: 75px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body w3-center">
+       <img src="perso/ghost_jaune.png">
+      </div>
+      <div class="w3-center" style="padding-bottom: 20px;">
+        <h1 style="color: black;">Yellow Was Not The Impostor !</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalLoseOrange" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg"style="margin-top: 75px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body w3-center">
+       <img src="perso/ghost_orange.png">
+      </div>
+      <div class="w3-center" style="padding-bottom: 20px;">
+        <h1 style="color: black;">Orange Was Not The Impostor !</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalLoseRed" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg"style="margin-top: 75px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body w3-center">
+       <img src="perso/ghost_rouge.png">
+      </div>
+      <div class="w3-center" style="padding-bottom: 20px;">
+        <h1 style="color: black;">Red Was Not The Impostor !</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalLosePurple" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg style="margin-top: 75px;"">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body w3-center">
+       <img src="perso/ghost_violet.png">
+      </div>
+      <div class="w3-center" style="padding-bottom: 20px;">
+        <h1 style="color: black;">Purple Was Not The Impostor !</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div  id="main" class="w3-center">
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo">-- --- .-. ... .  &ensp;   -.-. --- -.. . </h1>
+  </header>
+<div class="w3-center">
+  <div style="padding-top: 20px;">
+    <img src="perso/bleu.png" alt="Avatar"style="padding-right: 20px; padding-left: 20px;" height="200px" data-toggle="modal" data-target="#modalBlue">
+    <img src="perso/vertclair.png" alt="Avatar"style="padding-right: 20px; padding-left: 20px;" height="200px" data-toggle="modal" data-target="#modalGreen">
+    <img src="perso/blanc.png" alt="Avatar"style="padding-right: 20px; padding-left: 20px;" height="200px" data-toggle="modal" data-target="#modalWhite">
+    <img src="perso/noir.png" alt="Avatar"style="padding-right: 20px; padding-left: 20px;" height="200px" data-toggle="modal" data-target="#modalBlack">
+    <img src="perso/marron.png" alt="Avatar"style="padding-right: 20px; padding-left: 20px;" height="200px" data-toggle="modal" data-target="#modalBrown">
+  </div>
+  <div style="padding-top: 20px;">
+    <img src="perso/bleuciel.png" alt="Avatar"style="padding-right: 20px; padding-left: 20px;" height="200px" data-toggle="modal" data-target="#modalLightBlue">
+    <img src="perso/jaune.png" alt="Avatar"style="padding-right: 20px; padding-left: 20px;" height="200px" data-toggle="modal" data-target="#modalYellow">
+    <img src="perso/orange.png" alt="Avatar"style="padding-right: 20px; padding-left: 20px;" height="200px" data-toggle="modal" data-target="#modalOrange">
+    <img src="perso/rouge.png" alt="Avatar"style="padding-right: 20px; padding-left: 20px;" height="200px" data-toggle="modal" data-target="#modalRed">
+    <img src="perso/violet.PNG" alt="Avatar"style="padding-right: 20px; padding-left: 20px;" height="200px" data-toggle="modal" data-target="#modalPurple">
+  </div>
+  
+</div>
+
+
+<div class="w3-center" style="padding-top: 30px;">
+  <audio controls>
+    <source src="perso/code.wav" type="audio/wav">
+  </audio>
+</div>
+    
+<footer class="w3-center w3-text-grey w3-xlarge" style="padding-top: 50px;">
+  <p class="w3-medium">Powered by Caffeine and energy drinks (mostly)</a></p>
+</footer>
+
+</body>
+</html>
